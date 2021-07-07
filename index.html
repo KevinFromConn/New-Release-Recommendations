@@ -1,83 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Music For You</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="nav-wrapper col s12">
-
-              <a href="#" id="music-header" class="">Music For You</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#new-releases">New Releases</a></li>
-                <li><a href="#music-news">Music News</a></li>
-                <li><a href="#my-account">My Account</a></li>
-
-             
-
-              </ul>
-            </div>
-          </nav>
+      <nav>
+        <div class="nav-wrapper col s12 black h">
+          <a href="#" id="music-header" class="">Music For You</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#new-releases">New Releases</a></li>
+            <li><a href="#music-news">Music News</a></li>
+            <li><a href="#my-account">My Account</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!--jumbotron-->
-
-    <section id="jumbotron" class="background-">
+    <div class="row">
+      <section id="jumbotron" class="white-text">
         <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
-        <p>-HENRY WADSWORTH LONGFELLOW </p>
-    </section>
+        <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
+      </section>
+    </div>
 
-    <!--Main Section-->
+    <!--News Section-->
     <section>
-        <div id="music-news" class="">
-            <p id="" class="">
-                Music News!
-            </p>
-            <div id="card-txt" class=""">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam debitis, quisquam repudiandae ipsa cum accusantium, sit id illum numquam cupiditate explicabo? Nam, quidem. Odit aspernatur fugit possimus blanditiis, deleniti ullam?
+      <div class="row container">
+        <div class="col s12 m6 l4">
+            <div class="card-panel hoverable large">
+              <div class="card-image ">
+                <img src="./assets/css/images/placeholder.png" />
+                <br>
+                <h4 class="card-title">Music News</h4>
+              </div>
+              <div class="card-content">
+                <p>
+                  This is for a later development where we will add news alerts for recent music news. Will be using a seperate api to have breaking music news in the card. 
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
             </div>
-        </div>
-        <div id="music-news" class="">
-            <p id="" class="">
-                Music News!
-            </p>
-            <div id="card-txt" class=""">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam debitis, quisquam repudiandae ipsa cum accusantium, sit id illum numquam cupiditate explicabo? Nam, quidem. Odit aspernatur fugit possimus blanditiis, deleniti ullam?
+          </div>
+        <div class="col s12 m6 l4">
+            <div class="card-panel hoverable large">
+              <div class="card-image ">
+                <img src="./assets/css/images/placeholder.png" />
+                <br>
+                <h4 class="card-title">Music News</h4>
+              </div>
+              <div class="card-content">
+                <p>
+                  This is for a later development where we will add news alerts for recent music news. Will be using a seperate api to have breaking music news in the card. 
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
             </div>
-        </div>
-        <div id="music-news" class="">
-            <p id="" class="">
-                Music News!
-            </p>
-            <div id="card-txt" class=""">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam debitis, quisquam repudiandae ipsa cum accusantium, sit id illum numquam cupiditate explicabo? Nam, quidem. Odit aspernatur fugit possimus blanditiis, deleniti ullam?
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel hoverable large">
+              <div class="card-image ">
+                <img src="./assets/css/images/placeholder.png" />
+                <br>
+                <h4 class="card-title">Music News</h4>
+              </div>
+              <div class="card-content">
+                <p>
+                  This is for a later development where we will add news alerts for recent music news. Will be using a seperate api to have breaking music news in the card. 
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
             </div>
-        </div>
+          </div>
+      </div>
     </section>
     <br />
 
     <!--Section for Search -->
     <section class="">
-        <div id="search-bar" class="">
-          <form action="submit" class="">
-            <label for="input" class="">Music Genre That Fits Your Lifestyle</label><br/>
-            <input type="text" placeholder="Example: Country" class="" /><br>
-            <button id="seach-btn" class="">Search</button>
-          </form>
-        </div>
+      <div id="search-bar" class="">
+        <form action="submit" class="">
+          <label for="input" class=""
+            >Music Genre That Fits Your Lifestyle</label
+          ><br />
+          <input type="text" placeholder="Example: Country" class="" /><br />
+          <button id="seach-btn" class="">Search</button>
+        </form>
+      </div>
     </section>
 
-    <Footer>
+    <footer>
 
-    </Footer>
-
-
-
+    </footer>
 
 
 
@@ -86,6 +115,5 @@
 
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="./assets/js/script.js"></script>
-    
-</body>
+  </body>
 </html>
