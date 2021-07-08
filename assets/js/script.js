@@ -1,3 +1,4 @@
+
 // var getAppleMusic = function() {
 //     var apiUrl = 'https://api.music.apple.com/v1/catalog/us/genres&q=' + userInput + '&appid='
 
@@ -37,4 +38,5 @@ var searchBar = document.querySelector("#search-bar");
 
 searchBtn.addEventListener("click", function() {
     
+
 })
