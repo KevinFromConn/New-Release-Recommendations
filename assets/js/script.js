@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    console.log(elems)
+    var instances = M.Sidenav.init(elems, options);
+    console.log(instances)
+  });
+
+console.log("dwhajbsdh")
+
 var getAppleMusic = function() {
     var apiUrl = 'https://api.music.apple.com/v1/catalog/us/genres&q=' + userInput + '&appid='
 
