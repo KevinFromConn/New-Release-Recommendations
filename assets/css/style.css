@@ -1,5 +1,5 @@
 #jumbotron {
-  background-image: url("../css/images/music-back.jpg");
+  background-image: url("../css/images/background-music.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -9,4 +9,3 @@
   align-items: center;
   flex-wrap: wrap;
 }
-

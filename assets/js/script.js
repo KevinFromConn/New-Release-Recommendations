@@ -1,36 +1,30 @@
-
 var options = ["New Releases", "Music News", "My Account"];
 
 console.log(M.Sidenav);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(elems, options);
 });
 
 // Or with jQuery
 
-$(document).ready(function(){
-  $('.sidenav').sidenav();
+$(document).ready(function () {
+  $(".sidenav").sidenav();
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    console.log(elems)
-    var instances = M.Sidenav.init(elems, options);
-    console.log(instances)
-  });
-
-console.log("dwhajbsdh")
-
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".sidenav");
+  console.log(elems);
+  var instances = M.Sidenav.init(elems, options);
+  console.log(instances);
+});
 
 var btnEl = $("search-btn");
 var userInput = $("#search-content");
 var songTitle = $("#song-title");
 var searchItem = $("#search-item");
 var searchHistory = JSON.parse(localStorage.getItem("userInput")) || [];
-
 
 var searchFunction = function (searchTerm) {
   getGenres(searchTerm);
@@ -39,21 +33,26 @@ var searchFunction = function (searchTerm) {
   localStorage.setItem("userInput", JSON.stringify(searchHistory));
 };
 
-
 var getGenres = function (searchTerm) {
   fetch(
-    "https://api.spotify.com/v1/browse/new-releases?query=" +
+    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=" +
       searchTerm +
       "&type=genre",
     {
       method: "GET",
-      headers:{
-        "Authorization": "Bearer BQARGdUEzGHnZOIrVTdv9E834mzIPnud6A0JGmgG3xxG_DUDPWOgTRoMJIEUCLxP-y11m3_oneihrkdMYuL1f9FqTCD9kZhtrWZpXLGUcZuGXvq_E8JFNYypBlbjkGhBxCk3KBWawKVi7g"
-      }
+      headers: {
+        Authorization:
+          "Bearer BQCRdSKE316spKJxC7vgdloM1QVb2AjqpIOLM6lMB_BT9TkD1UxwYd7iHbNlqrY3zq79M1viNFzLqMrHfbTeOmXx2r0T71Oh1S9KCdyNF_W5E6lGcsNJDnSPCzSaQZYmTgES552zNfMDaQ",
+      },
     }
   ).then(function (response) {
-    response.json().then(function (data) {
-      console.log(data);
+    response.json().then(function () {
+      var genres = userInput.value;
+
+      for (let i = 0; i < genres.length; i++) {
+        var userGenre = genres[i];
+      }
+      console.log(userGenre);
     });
   });
 };
@@ -67,7 +66,7 @@ var displayGenres = function (spotifyData) {
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
-//   console.log(elems);
+  //   console.log(elems);
   var instances = M.Sidenav.init(elems, options);
   console.log(instances);
 });
@@ -77,4 +76,3 @@ function submitForm(event) {
   console.log(userInput.val());
   searchFunction(userInput.val());
 }
-
