@@ -4,12 +4,14 @@ var songTitle = $("#song-title");
 var searchItem = $("#search-item");
 var searchHistory = JSON.parse(localStorage.getItem("userInput")) || [];
 
+
 var searchFunction = function (searchTerm) {
   getGenres(searchTerm);
   //   searchHistory[searchTerm] = null;
   if (!searchHistory.includes(searchTerm)) searchHistory.push(searchTerm);
   localStorage.setItem("userInput", JSON.stringify(searchHistory));
 };
+
 
 var getGenres = function (searchTerm) {
   fetch(
