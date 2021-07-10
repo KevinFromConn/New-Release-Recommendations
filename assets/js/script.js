@@ -24,6 +24,7 @@ var btnEl = $("search-btn");
 var userInput = $("#search-content");
 var songTitle = $("#song-title");
 var searchItem = $("#search-item");
+var genreDiv = $("#container");
 var searchHistory = JSON.parse(localStorage.getItem("userInput")) || [];
 
 var searchFunction = function (searchTerm) {
@@ -35,34 +36,27 @@ var searchFunction = function (searchTerm) {
 
 var getGenres = function (searchTerm) {
   fetch(
-    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=" +
-      searchTerm +
-      "&type=genre",
+    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=",
+     
     {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer BQCRdSKE316spKJxC7vgdloM1QVb2AjqpIOLM6lMB_BT9TkD1UxwYd7iHbNlqrY3zq79M1viNFzLqMrHfbTeOmXx2r0T71Oh1S9KCdyNF_W5E6lGcsNJDnSPCzSaQZYmTgES552zNfMDaQ",
+          "Bearer BQAPoBGm_BvQT-MnYhVWYAHyTo-TwbExZz7M6Z7egOIpkM4NWoRq3YfRIb_4m9JqMaeSTP8qxBgj3jx5dpMtVSkqIlK2ENmBK_ePaVJdn4aV6wAMea13ZTIfYSS2FT4crPNuaSotRSNcMw",
       },
     }
   ).then(function (response) {
     response.json().then(function () {
-      var genres = userInput.value;
-
-      for (let i = 0; i < genres.length; i++) {
-        var userGenre = genres[i];
-      }
-      console.log(userGenre);
+        
     });
   });
 };
 
-var displayGenres = function (spotifyData) {
-  songTitle.innerHtml = "";
-  for (let i = 0; i < spotifyData.length; i++) {
-    songTitle.innerHtml = "";
-  }
-};
+var displayGenres = function () {
+//   songTitle.innerHtml = "";
+  var genreDisplay = $(document.createElement('div'))
+  $(songTitle).append(genreDisplay)
+  };
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
@@ -75,4 +69,6 @@ function submitForm(event) {
   event.preventDefault();
   console.log(userInput.val());
   searchFunction(userInput.val());
+
+  displayGenres();
 }
