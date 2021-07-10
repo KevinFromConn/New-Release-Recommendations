@@ -12,9 +12,25 @@
     <title>Music For You</title>
   </head>
   <body>
-    <header>
-      <nav class="nav-wrapper col s12 indigo darken-4">
-        <div>
+    <nav>
+      <div class="nav-wrapper indigo darken-4">
+        <a href="#!" class="brand-logo">Music For You</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#new-releases">New Releases</a></li>
+          <li><a href="#music-news">Music News</a></li>
+          <li><a href="#my-account">My Account</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#new-releases">New Releases</a></li>
+      <li><a href="#music-news">Music News</a></li>
+      <li><a href="#my-account">My Account</a></li>
+    </ul>
+      <!-- <nav> 
+        <div class="nav-wrapper indigo darken-4">
           <a href="#" id="music-header" class="">Music For You</a>
           <ul id="nav-mobile" class="right">
             <li><a href="#new-releases">New Releases</a></li>
@@ -22,12 +38,10 @@
             <li><a href="#my-account">My Account</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
+      </nav> -->
 
     <!--jumbotron-->
-    <div class="row">
-      <section id="jumbotron" class="white-text">
+    <section id="jumbotron" class="row white-text middle-align">
         <div>
           <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
         </div>
@@ -35,7 +49,6 @@
           <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
         </div>
       </section>
-    </div>
 
     <!--News Section-->
     <section class="">
