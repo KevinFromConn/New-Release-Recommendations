@@ -1,8 +1,36 @@
+
+var options = ["New Releases", "Music News", "My Account"];
+
+console.log(M.Sidenav);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    console.log(elems)
+    var instances = M.Sidenav.init(elems, options);
+    console.log(instances)
+  });
+
+console.log("dwhajbsdh")
+
+
 var btnEl = $("search-btn");
 var userInput = $("#search-content");
 var songTitle = $("#song-title");
 var searchItem = $("#search-item");
 var searchHistory = JSON.parse(localStorage.getItem("userInput")) || [];
+
 
 var searchFunction = function (searchTerm) {
   getGenres(searchTerm);
@@ -10,6 +38,7 @@ var searchFunction = function (searchTerm) {
   if (!searchHistory.includes(searchTerm)) searchHistory.push(searchTerm);
   localStorage.setItem("userInput", JSON.stringify(searchHistory));
 };
+
 
 var getGenres = function (searchTerm) {
   fetch(
@@ -48,3 +77,4 @@ function submitForm(event) {
   console.log(userInput.val());
   searchFunction(userInput.val());
 }
+

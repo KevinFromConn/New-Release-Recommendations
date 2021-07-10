@@ -12,29 +12,46 @@
     <title>Music For You</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-wrapper col s12 black h">
+    <nav>
+      <div class="nav-wrapper indigo darken-4">
+        <a href="#!" class="brand-logo">Music For You</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#new-releases">New Releases</a></li>
+          <li><a href="#music-news">Music News</a></li>
+          <li><a href="#my-account">My Account</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#new-releases">New Releases</a></li>
+      <li><a href="#music-news">Music News</a></li>
+      <li><a href="#my-account">My Account</a></li>
+    </ul>
+      <!-- <nav> 
+        <div class="nav-wrapper indigo darken-4">
           <a href="#" id="music-header" class="">Music For You</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="right">
             <li><a href="#new-releases">New Releases</a></li>
             <li><a href="#music-news">Music News</a></li>
             <li><a href="#my-account">My Account</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
+      </nav> -->
 
     <!--jumbotron-->
-    <div class="row">
-      <section id="jumbotron" class="white-text">
-        <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
-        <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
+    <section id="jumbotron" class="row white-text middle-align">
+        <div>
+          <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
+        </div>
+        <div>
+          <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
+        </div>
       </section>
-    </div>
 
     <!--News Section-->
-    <section>
+    <section class="">
       <div class="row container">
         <div class="col s12 m6 l4">
           <div class="card-panel hoverable large">
@@ -96,13 +113,16 @@
       </div>
     </section>
     <br />
+    <hr />
 
     <!--Section for Search -->
+
     <section class="">
       <div id="search-bar" class="">
         <form id="search-item" onsubmit="submitForm(event)">
           <label for="search-content" class="">
             Music Genre That Fits Your Lifestyle</label
+
           ><br />
           <input
             type="text"
@@ -113,11 +133,54 @@
           <button id="search-btn" type="submit" class="">Search</button>
         </form>
       </div>
-    </section>
-    <br />
-    <hr />
 
-    <footer></footer>
+
+      <div class="row container">
+        <div class="col s12 m6 l4">
+          <div class="hoverable large">
+            <div id="album-picture" class="card-image">
+              <br />
+              <h4 id="song-title" class="card-title"></h4>
+            </div>
+            <div id="artists" class="card-content">
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="hoverable large">
+            <div id="album-picture" class="card-image">
+              <br />
+              <h4 id="song-title" class="card-title"></h4>
+            </div>
+            <div id="artists" class="card-content">
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="hoverable large">
+            <div id="album-picture" class="card-image">
+              <br />
+              <h4 id="song-title" class="card-title"></h4>
+            </div>
+            <div id="artists" class="card-content">
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- footer -->
     <footer class="page-footer indigo darken-4">
@@ -135,9 +198,9 @@
                 <a class="grey-text text-lighten-3" href="#!">Music News</a>
               </li>
               <li><a class="grey-text text-lighten-3" href="#!">License</a></li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#!">Github Pages</a>
-              </li>
+
+              <li><a class="grey-text text-lighten-3" href="#!">Github Pages</a></li>
+
             </ul>
           </div>
         </div>
@@ -156,7 +219,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
