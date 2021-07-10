@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -117,16 +116,24 @@
     <hr />
 
     <!--Section for Search -->
-    <section class="center-align">
-      <div id="search-bar" class="input-field inline centered">
-        <form action="submit" class="">
-          <label for="input" class=""
-            >Music Genre That Fits Your Lifestyle</label
+
+    <section class="">
+      <div id="search-bar" class="">
+        <form id="search-item" onsubmit="submitForm(event)">
+          <label for="search-content" class="">
+            Music Genre That Fits Your Lifestyle</label
+
           ><br />
-          <input type="text" placeholder="Example: Country" class="" /><br />
-          <button id="seach-btn" class="">Search</button>
+          <input
+            type="text"
+            placeholder="Example: Country"
+            id="search-content"
+            name="search-content"
+          /><br />
+          <button id="search-btn" type="submit" class="">Search</button>
         </form>
       </div>
+
 
       <div class="row container">
         <div class="col s12 m6 l4">
@@ -174,6 +181,7 @@
       </div>
     </section>
 
+
     <!-- footer -->
     <footer class="page-footer indigo darken-4">
       <div class="container">
@@ -190,7 +198,9 @@
                 <a class="grey-text text-lighten-3" href="#!">Music News</a>
               </li>
               <li><a class="grey-text text-lighten-3" href="#!">License</a></li>
+
               <li><a class="grey-text text-lighten-3" href="#!">Github Pages</a></li>
+
             </ul>
           </div>
         </div>
@@ -216,5 +226,4 @@
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
-
 </html>
