@@ -37,4 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(instances);
   });
 
-  btnEl.addEventListener("click", searchFunction);
+var searchBtn = document.querySelector("#search-btn");
+var searchBar = document.querySelector("#search-bar");
+
+searchBtn.addEventListener("click", function() {
+    
+
+})
