@@ -1,22 +1,12 @@
 #jumbotron {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: url("../css/images/background-music.jpg");
-  background-size:100% 100%;
+  background-image: url("../css/images/music-back.jpg");
   background-repeat: no-repeat;
-    }
-    
-    
-    
-    /* background-image: url("../css/images/background-music.jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
-    height: 100%;
-    background-position: 80%;
-    display: flex;
-    justify-content: space-between;
-   align-items: center;
-    flex-wrap: wrap; */
+  background-size: cover;
+  height: 100%;
+  background-position: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
