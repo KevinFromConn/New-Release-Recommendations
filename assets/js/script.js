@@ -2,10 +2,10 @@ var options = ["New Releases", "Music News", "My Account"];
 
 console.log(M.Sidenav);
 
-document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.querySelectorAll(".sidenav");
-  var instances = M.Sidenav.init(elems, options);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   var elems = document.querySelectorAll(".sidenav");
+//   var instances = M.Sidenav.init(elems, options);
+// });
 
 // Or with jQuery
 
@@ -36,17 +36,17 @@ var searchFunction = function (searchTerm) {
 
 var getGenres = function (searchTerm) {
   fetch(
-    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=",
+    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=" + searchTerm,
      
     {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer BQAPoBGm_BvQT-MnYhVWYAHyTo-TwbExZz7M6Z7egOIpkM4NWoRq3YfRIb_4m9JqMaeSTP8qxBgj3jx5dpMtVSkqIlK2ENmBK_ePaVJdn4aV6wAMea13ZTIfYSS2FT4crPNuaSotRSNcMw",
+          "Bearer BQAB6KVOIZj692V8bHjrd8ZCqeVLFaydoU6RlVqnHnLh7tRrz7_Nuh891uUvnidx2MSKUz6NSIZuem5EGRbBN1fqOij_UaRCnL9A-hSoFf1ve8HeA_TdPVzDB_snTiGwZo-HaVe7XKlo_A",
       },
     }
-  ).then(function (response) {
-    response.json().then(function () {
+  ).then(function(response) {
+    response.json().then(function() {
         
     });
   });
@@ -70,5 +70,6 @@ function submitForm(event) {
   console.log(userInput.val());
   searchFunction(userInput.val());
 
+  getGenres();
   displayGenres();
 }
