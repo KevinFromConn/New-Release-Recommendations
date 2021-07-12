@@ -1,6 +1,6 @@
 var options = ["New Releases", "Music News", "My Account"];
 
-console.log(M.Sidenav);
+// console.log(M.Sidenav);
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   var elems = document.querySelectorAll(".sidenav");
@@ -15,9 +15,9 @@ $(document).ready(function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
-  console.log(elems);
+//   console.log(elems);
   var instances = M.Sidenav.init(elems, options);
-  console.log(instances);
+//   console.log(instances);
 });
 
 var btnEl = $("search-btn");
@@ -34,15 +34,14 @@ var searchFunction = function (searchTerm) {
   localStorage.setItem("userInput", JSON.stringify(searchHistory));
 };
 
-var getGenres = function (searchTerm) {
+var getGenres = function () {
   fetch(
-    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=" + searchTerm,
-     
-    {
+    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=",
+     {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer BQAB6KVOIZj692V8bHjrd8ZCqeVLFaydoU6RlVqnHnLh7tRrz7_Nuh891uUvnidx2MSKUz6NSIZuem5EGRbBN1fqOij_UaRCnL9A-hSoFf1ve8HeA_TdPVzDB_snTiGwZo-HaVe7XKlo_A",
+          "Bearer BQD__SF9CubTNahDUppd-Ji4vb0rZEeinkYnB70l5Eq0EP1M2KEvw1WlDNaxcxdi0J8BXRkJfdkYY2nH7UulPh69wctH53Hn_Vpa5OY24nMLYfRyEtUsDO2Njbejb6kZyXxNN9qjg0U9tQ",
       },
     }
   ).then(function(response) {
@@ -53,14 +52,16 @@ var getGenres = function (searchTerm) {
 };
 
 var displayGenres = function () {
-//   songTitle.innerHtml = "";
+  userInput.innerHtml = "";
   var genreDisplay = $(document.createElement('div'))
-  $(songTitle).append(genreDisplay)
+  var displayDiv = $(genreDisplay.attr("container"))
+  
+  $(displayDiv).append(genreDisplay)
   };
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
-  //   console.log(elems);
+  console.log(elems);
   var instances = M.Sidenav.init(elems, options);
   console.log(instances);
 });
