@@ -1,36 +1,31 @@
-
 var options = ["New Releases", "Music News", "My Account"];
 
-console.log(M.Sidenav);
+// console.log(M.Sidenav);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   var elems = document.querySelectorAll(".sidenav");
+//   var instances = M.Sidenav.init(elems, options);
+// });
 
 // Or with jQuery
 
-$(document).ready(function(){
-  $('.sidenav').sidenav();
+$(document).ready(function () {
+  $(".sidenav").sidenav();
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    console.log(elems)
-    var instances = M.Sidenav.init(elems, options);
-    console.log(instances)
-  });
-
-console.log("dwhajbsdh")
-
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".sidenav");
+//   console.log(elems);
+  var instances = M.Sidenav.init(elems, options);
+//   console.log(instances);
+});
 
 var btnEl = $("search-btn");
 var userInput = $("#search-content");
 var songTitle = $("#song-title");
 var searchItem = $("#search-item");
+var genreDiv = $("#container");
 var searchHistory = JSON.parse(localStorage.getItem("userInput")) || [];
-
 
 var searchFunction = function (searchTerm) {
   getGenres(searchTerm);
@@ -39,35 +34,34 @@ var searchFunction = function (searchTerm) {
   localStorage.setItem("userInput", JSON.stringify(searchHistory));
 };
 
-
-var getGenres = function (searchTerm) {
+var getGenres = function () {
   fetch(
-    "https://api.spotify.com/v1/browse/new-releases?query=" +
-      searchTerm +
-      "&type=genre",
-    {
+    "https://api.spotify.com/v1/recommendations/available-genre-seeds?query=",
+     {
       method: "GET",
-      headers:{
-        "Authorization": "Bearer BQARGdUEzGHnZOIrVTdv9E834mzIPnud6A0JGmgG3xxG_DUDPWOgTRoMJIEUCLxP-y11m3_oneihrkdMYuL1f9FqTCD9kZhtrWZpXLGUcZuGXvq_E8JFNYypBlbjkGhBxCk3KBWawKVi7g"
-      }
+      headers: {
+        Authorization:
+          "Bearer BQD__SF9CubTNahDUppd-Ji4vb0rZEeinkYnB70l5Eq0EP1M2KEvw1WlDNaxcxdi0J8BXRkJfdkYY2nH7UulPh69wctH53Hn_Vpa5OY24nMLYfRyEtUsDO2Njbejb6kZyXxNN9qjg0U9tQ",
+      },
     }
-  ).then(function (response) {
-    response.json().then(function (data) {
-      console.log(data);
+  ).then(function(response) {
+    response.json().then(function() {
+        
     });
   });
 };
 
-var displayGenres = function (spotifyData) {
-  songTitle.innerHtml = "";
-  for (let i = 0; i < spotifyData.length; i++) {
-    songTitle.innerHtml = "";
-  }
-};
+var displayGenres = function () {
+  userInput.innerHtml = "";
+  var genreDisplay = $(document.createElement('div'))
+  var displayDiv = $(genreDisplay.attr("container"))
+  
+  $(displayDiv).append(genreDisplay)
+  };
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
-//   console.log(elems);
+  console.log(elems);
   var instances = M.Sidenav.init(elems, options);
   console.log(instances);
 });
@@ -76,5 +70,7 @@ function submitForm(event) {
   event.preventDefault();
   console.log(userInput.val());
   searchFunction(userInput.val());
-}
 
+  getGenres();
+  displayGenres();
+}

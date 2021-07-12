@@ -15,7 +15,9 @@
     <nav>
       <div class="nav-wrapper indigo darken-4">
         <a href="#!" class="brand-logo">Music For You</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">Menu</i></a
+        >
         <ul class="right hide-on-med-and-down">
           <li><a href="#new-releases">New Releases</a></li>
           <li><a href="#music-news">Music News</a></li>
@@ -23,32 +25,22 @@
         </ul>
       </div>
     </nav>
-  
+
     <ul class="sidenav" id="mobile-demo">
       <li><a href="#new-releases">New Releases</a></li>
       <li><a href="#music-news">Music News</a></li>
       <li><a href="#my-account">My Account</a></li>
     </ul>
-      <!-- <nav> 
-        <div class="nav-wrapper indigo darken-4">
-          <a href="#" id="music-header" class="">Music For You</a>
-          <ul id="nav-mobile" class="right">
-            <li><a href="#new-releases">New Releases</a></li>
-            <li><a href="#music-news">Music News</a></li>
-            <li><a href="#my-account">My Account</a></li>
-          </ul>
-        </div>
-      </nav> -->
 
     <!--jumbotron-->
     <section id="jumbotron" class="row white-text middle-align">
-        <div>
-          <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
-        </div>
-        <div>
-          <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
-        </div>
-      </section>
+      <div>
+        <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
+      </div>
+      <div>
+        <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
+      </div>
+    </section>
 
     <!--News Section-->
     <section class="">
@@ -120,9 +112,8 @@
     <section class="">
       <div id="search-bar" class="">
         <form id="search-item" onsubmit="submitForm(event)">
-          <label for="search-content" class="">
+          <label for="search-label" class="">
             Music Genre That Fits Your Lifestyle</label
-
           ><br />
           <input
             type="text"
@@ -135,7 +126,6 @@
       </div>
 
     </section>
-
 
     <!-- footer -->
     <footer class="page-footer indigo darken-4">
@@ -154,8 +144,9 @@
               </li>
               <li><a class="grey-text text-lighten-3" href="#!">License</a></li>
 
-              <li><a class="grey-text text-lighten-3" href="#!">Github Pages</a></li>
-
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Github Pages</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -174,11 +165,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
