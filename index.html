@@ -41,12 +41,11 @@
       </nav> -->
 
     <!--jumbotron-->
-    <section id="jumbotron" class="row white-text middle-align">
-        <div>
+    <section id="jumbotron" class="">
+        <div id="jumbotron-inner">
           <h4>"MUSIC IS THE UNIVERSAL LANGUAGE OF MANKIND"</h4>
-        </div>
-        <div>
-          <p class="right-align">-HENRY WADSWORTH LONGFELLOW</p>
+          <br>
+          <p class="name">-HENRY WADSWORTH LONGFELLOW</p>
         </div>
       </section>
 
@@ -117,8 +116,8 @@
 
     <!--Section for Search -->
 
-    <section class="">
-      <div id="search-bar" class="">
+    <section class="center">
+      <div id="search-bar" class="center">
         <form id="search-item" onsubmit="submitForm(event)">
           <label for="search-content" class="">
             Music Genre That Fits Your Lifestyle</label
@@ -129,6 +128,7 @@
             placeholder="Example: Country"
             id="search-content"
             name="search-content"
+            class="center"
           /><br />
           <button id="search-btn" type="submit" class="">Search</button>
         </form>

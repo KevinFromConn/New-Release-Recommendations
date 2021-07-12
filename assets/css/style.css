@@ -1,12 +1,22 @@
 #jumbotron {
-  background-image: url("../css/images/music-back.jpg");
+  background-image: url("../css/images/cool-music-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   background-position: 80%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
+#jumbotron-inner {
+  width: 100%;
+  margin: 3.5%;
+  color: white;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.name {
+  text-align: right;
+}
