@@ -1,5 +1,5 @@
 #jumbotron {
-  background-image: url("../css/images/cool-music-background.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 #jumbotron-inner {
@@ -19,4 +20,5 @@
 
 .name {
   text-align: right;
+
 }
